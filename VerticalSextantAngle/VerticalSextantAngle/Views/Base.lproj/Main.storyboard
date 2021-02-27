@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="EXl-uZ-5hc">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="VerticalSextantAngle" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="Oop-0e-prc">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="774"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="bottom" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="pe5-5f-OQf">
+                                <rect key="frame" x="15" y="5" width="379" height="769"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Distance by vertical angle measurements" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uIC-9e-CND">
+                                        <rect key="frame" x="0.0" y="0.0" width="379" height="65.5"/>
+                                        <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="23"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleAspectFit" distribution="fillProportionally" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="c2h-b5-2CH" userLabel="Angle Stack View">
+                                        <rect key="frame" x="0.0" y="99.5" width="379" height="34"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Angle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gUq-zW-CU3">
+                                                <rect key="frame" x="0.0" y="0.0" width="171" height="34"/>
+                                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="20"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleAspectFit" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="tne-In-gdt">
+                                                <rect key="frame" x="172" y="0.0" width="207" height="34"/>
+                                                <subviews>
+                                                    <textField opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0" borderStyle="roundedRect" textAlignment="right" clearsOnBeginEditing="YES" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jah-hs-1xo">
+                                                        <rect key="frame" x="0.0" y="0.0" width="93.5" height="34"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
+                                                        <connections>
+                                                            <action selector="textChange:" destination="BYZ-38-t0r" eventType="editingChanged" id="nby-o9-bQD"/>
+                                                        </connections>
+                                                    </textField>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="°" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CQy-Z0-euM">
+                                                        <rect key="frame" x="93.5" y="0.0" width="10" height="34"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="10" id="f25-lY-Yoc"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="20"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" tag="1" contentMode="scaleAspectFit" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0" borderStyle="roundedRect" textAlignment="center" clearsOnBeginEditing="YES" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0wK-Fb-3d7">
+                                                        <rect key="frame" x="103.5" y="0.0" width="93.5" height="34"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                                        <connections>
+                                                            <action selector="textChange:" destination="BYZ-38-t0r" eventType="editingChanged" id="uDp-WC-lg6"/>
+                                                        </connections>
+                                                    </textField>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="'" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2i0-AU-dxU">
+                                                        <rect key="frame" x="197" y="0.0" width="10" height="34"/>
+                                                        <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="20"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="0wK-Fb-3d7" firstAttribute="width" secondItem="jah-hs-1xo" secondAttribute="width" id="B6M-ox-KN2"/>
+                                                    <constraint firstItem="2i0-AU-dxU" firstAttribute="width" secondItem="CQy-Z0-euM" secondAttribute="width" id="bSt-z7-hJj"/>
+                                                    <constraint firstItem="2i0-AU-dxU" firstAttribute="height" secondItem="CQy-Z0-euM" secondAttribute="height" id="bWe-yc-ohO"/>
+                                                    <constraint firstItem="0wK-Fb-3d7" firstAttribute="width" secondItem="jah-hs-1xo" secondAttribute="width" id="owe-DK-fbp"/>
+                                                </constraints>
+                                            </stackView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="tne-In-gdt" secondAttribute="trailing" id="IHx-Tn-0Y5"/>
+                                            <constraint firstAttribute="trailing" secondItem="tne-In-gdt" secondAttribute="trailing" id="r2M-PN-X5a"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="syB-tG-C63" userLabel="HE Stack View">
+                                        <rect key="frame" x="0.0" y="168" width="379" height="34"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Height of eye (m)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U38-AG-bRY">
+                                                <rect key="frame" x="0.0" y="0.0" width="280.5" height="34"/>
+                                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="20"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" tag="2" contentMode="scaleAspectFit" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0.0" borderStyle="roundedRect" textAlignment="center" clearsOnBeginEditing="YES" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7Ff-li-bNb">
+                                                <rect key="frame" x="285.5" y="0.0" width="93.5" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                                <connections>
+                                                    <action selector="textChange:" destination="BYZ-38-t0r" eventType="editingChanged" id="87K-WL-zxo"/>
+                                                </connections>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="35v-sg-xGc" userLabel="Object stack view">
+                                        <rect key="frame" x="0.0" y="236" width="379" height="34"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Height of object (m)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zTf-H6-iLx">
+                                                <rect key="frame" x="0.0" y="0.0" width="280.5" height="34"/>
+                                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="20"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" tag="3" contentMode="scaleAspectFit" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0.0" borderStyle="roundedRect" textAlignment="center" clearsOnBeginEditing="YES" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4pb-8s-xOP">
+                                                <rect key="frame" x="285.5" y="0.0" width="93.5" height="34"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="93.5" id="o6Q-xR-eui"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                                <connections>
+                                                    <action selector="textChange:" destination="BYZ-38-t0r" eventType="editingChanged" id="mYV-de-8kP"/>
+                                                </connections>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="bottom" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="EMR-it-eiL" userLabel="Distance Stack View">
+                                        <rect key="frame" x="0.0" y="304.5" width="379" height="34"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Object distance (NM):" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cGM-CT-Lmw">
+                                                <rect key="frame" x="0.0" y="5.5" width="255.5" height="28.5"/>
+                                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="20"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0.0" borderStyle="roundedRect" textAlignment="center" clearsOnBeginEditing="YES" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Szc-FF-u5O">
+                                                <rect key="frame" x="285.5" y="0.0" width="93.5" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                                <connections>
+                                                    <action selector="textChange:" destination="BYZ-38-t0r" eventType="editingChanged" id="Sd6-6L-XeP"/>
+                                                </connections>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="i9G-gO-aOH" userLabel="Button Stack View">
+                                        <rect key="frame" x="0.0" y="372.5" width="379" height="49.5"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wGV-a7-1sf">
+                                                <rect key="frame" x="0.0" y="0.0" width="187" height="49.5"/>
+                                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="18"/>
+                                                <state key="normal" title="C" image="CalculateButtonOn">
+                                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0Nq-ws-iiG"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UXD-2L-yKb">
+                                                <rect key="frame" x="192" y="0.0" width="187" height="49.5"/>
+                                                <state key="normal" title="R" image="ResetButtonOn">
+                                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iVG-lc-VI5"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="RYL-wX-Cqa" userLabel="Units Stack View">
+                                        <rect key="frame" x="0.0" y="456.5" width="379" height="31"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Units:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S8H-ds-nu4">
+                                                <rect key="frame" x="0.0" y="0.0" width="187" height="31"/>
+                                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="20"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="LbH-7V-OCc">
+                                                <rect key="frame" x="192" y="0.0" width="187" height="32"/>
+                                                <segments>
+                                                    <segment title="Meters"/>
+                                                    <segment title="Feet"/>
+                                                </segments>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <connections>
+                                                    <action selector="unitSwitch:" destination="BYZ-38-t0r" eventType="valueChanged" id="1Xh-8G-MkZ"/>
+                                                </connections>
+                                            </segmentedControl>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="DLT-Hh-aDe" userLabel="Method Stack View">
+                                        <rect key="frame" x="0.0" y="521.5" width="379" height="247.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Method:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A08-sO-W1Q">
+                                                <rect key="frame" x="0.0" y="0.0" width="379" height="31.5"/>
+                                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="22"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <pickerView clearsContextBeforeDrawing="NO" contentMode="scaleToFill" layoutMarginsFollowReadableWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rPP-RO-feN">
+                                                <rect key="frame" x="0.0" y="31.5" width="379" height="216"/>
+                                            </pickerView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="c2h-b5-2CH" firstAttribute="leading" secondItem="pe5-5f-OQf" secondAttribute="leading" id="0Zw-NN-9bU"/>
+                                    <constraint firstItem="DLT-Hh-aDe" firstAttribute="leading" secondItem="pe5-5f-OQf" secondAttribute="leading" id="5Uq-oE-J84"/>
+                                    <constraint firstItem="i9G-gO-aOH" firstAttribute="leading" secondItem="pe5-5f-OQf" secondAttribute="leading" id="81X-d0-9GC"/>
+                                    <constraint firstItem="4pb-8s-xOP" firstAttribute="width" secondItem="7Ff-li-bNb" secondAttribute="width" id="BDJ-h2-LwT"/>
+                                    <constraint firstItem="35v-sg-xGc" firstAttribute="leading" secondItem="pe5-5f-OQf" secondAttribute="leading" id="FMe-7K-Xwd"/>
+                                    <constraint firstAttribute="trailing" secondItem="DLT-Hh-aDe" secondAttribute="trailing" id="GBg-PO-bGp"/>
+                                    <constraint firstAttribute="trailing" secondItem="i9G-gO-aOH" secondAttribute="trailing" id="HFK-Gv-VLC"/>
+                                    <constraint firstItem="4pb-8s-xOP" firstAttribute="width" secondItem="jah-hs-1xo" secondAttribute="width" id="REs-HG-GC3"/>
+                                    <constraint firstItem="RYL-wX-Cqa" firstAttribute="leading" secondItem="pe5-5f-OQf" secondAttribute="leading" id="Td6-HN-YSe"/>
+                                    <constraint firstAttribute="trailing" secondItem="uIC-9e-CND" secondAttribute="trailing" id="U3y-HB-7NL"/>
+                                    <constraint firstItem="EMR-it-eiL" firstAttribute="leading" secondItem="pe5-5f-OQf" secondAttribute="leading" id="Ua7-Im-hoU"/>
+                                    <constraint firstItem="uIC-9e-CND" firstAttribute="leading" secondItem="pe5-5f-OQf" secondAttribute="leading" id="Zvq-xn-l5z"/>
+                                    <constraint firstItem="7Ff-li-bNb" firstAttribute="width" secondItem="jah-hs-1xo" secondAttribute="width" id="gQb-rT-G2I"/>
+                                    <constraint firstAttribute="trailing" secondItem="RYL-wX-Cqa" secondAttribute="trailing" id="h6h-g3-7Oc"/>
+                                    <constraint firstAttribute="trailing" secondItem="EMR-it-eiL" secondAttribute="trailing" id="ph7-lt-LSK"/>
+                                    <constraint firstItem="Szc-FF-u5O" firstAttribute="width" secondItem="jah-hs-1xo" secondAttribute="width" id="rs6-nT-zvw"/>
+                                    <constraint firstItem="syB-tG-C63" firstAttribute="leading" secondItem="pe5-5f-OQf" secondAttribute="leading" id="xBG-35-3Tf"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="pe5-5f-OQf" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="5" id="3ga-of-s8l"/>
+                            <constraint firstItem="Oop-0e-prc" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="FgX-bd-Daa"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Oop-0e-prc" secondAttribute="trailing" id="KaZ-Eb-9Ua"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="pe5-5f-OQf" secondAttribute="trailing" constant="20" id="Nsx-00-HJZ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Oop-0e-prc" secondAttribute="bottom" id="WYw-dK-izY"/>
+                            <constraint firstItem="pe5-5f-OQf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="pII-n7-izz"/>
+                            <constraint firstItem="Oop-0e-prc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="rQa-D6-g02"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="pe5-5f-OQf" secondAttribute="bottom" id="xdd-jy-HYp"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="qVb-cH-S5a">
+                        <barButtonItem key="rightBarButtonItem" title="Help" id="kRh-jE-6dh">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <segue destination="kf7-E5-NGO" kind="presentation" modalPresentationStyle="automatic" id="X8O-V4-HWd"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="calculateButton" destination="wGV-a7-1sf" id="5GK-3Q-HWH"/>
+                        <outlet property="degreeText" destination="jah-hs-1xo" id="Vfa-HG-aRb"/>
+                        <outlet property="distanceLabel" destination="cGM-CT-Lmw" id="RL9-7S-VtQ"/>
+                        <outlet property="distanceText" destination="Szc-FF-u5O" id="lNc-62-jRN"/>
+                        <outlet property="heightOfEyeLabel" destination="U38-AG-bRY" id="j5s-D1-6pm"/>
+                        <outlet property="heightOfEyeText" destination="7Ff-li-bNb" id="Q6r-Co-qGS"/>
+                        <outlet property="methodPicker" destination="rPP-RO-feN" id="VCI-n7-Frx"/>
+                        <outlet property="minuteText" destination="0wK-Fb-3d7" id="Pof-xs-lkD"/>
+                        <outlet property="objectHeightLabel" destination="zTf-H6-iLx" id="5Wy-CP-NcI"/>
+                        <outlet property="objectHeightText" destination="4pb-8s-xOP" id="hiF-wc-Rmc"/>
+                        <outlet property="unitSwitch" destination="LbH-7V-OCc" id="MwL-mT-w6Z"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="178" y="119"/>
+        </scene>
+        <!--Help View Controller-->
+        <scene sceneID="i3O-qa-ISr">
+            <objects>
+                <viewController id="kf7-E5-NGO" customClass="HelpViewController" customModule="VerticalSextantAngle" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Px6-BF-xTk">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="GgK-uU-qxt">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="820"/>
+                                <subviews>
+                                    <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d8F-pg-a36">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                                        <color key="barTintColor" red="0.078098304569721222" green="0.26121455430984497" blue="0.78438097238540649" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <textAttributes key="titleTextAttributes">
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </textAttributes>
+                                        <items>
+                                            <navigationItem title="Help" id="WIv-FV-NJI">
+                                                <barButtonItem key="leftBarButtonItem" title="Back" id="FDG-M4-GM6">
+                                                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <connections>
+                                                        <action selector="backButtonPressed:" destination="kf7-E5-NGO" id="MYn-kR-jXG"/>
+                                                    </connections>
+                                                </barButtonItem>
+                                            </navigationItem>
+                                        </items>
+                                    </navigationBar>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="WUe-Zv-uwd">
+                                        <rect key="frame" x="0.0" y="69" width="414" height="751"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                        <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="WUe-Zv-uwd" firstAttribute="top" secondItem="d8F-pg-a36" secondAttribute="bottom" constant="13" id="YEZ-p3-uiQ"/>
+                                    <constraint firstAttribute="trailing" secondItem="WUe-Zv-uwd" secondAttribute="trailing" id="aaw-4T-vSN"/>
+                                    <constraint firstItem="WUe-Zv-uwd" firstAttribute="leading" secondItem="GgK-uU-qxt" secondAttribute="leading" id="gPe-6Y-0s2"/>
+                                    <constraint firstAttribute="bottom" secondItem="WUe-Zv-uwd" secondAttribute="bottom" id="wxx-AX-wad"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="GgK-uU-qxt" firstAttribute="top" secondItem="Lot-oI-2sn" secondAttribute="top" id="7Ir-Cx-s9k"/>
+                            <constraint firstItem="GgK-uU-qxt" firstAttribute="centerX" secondItem="Px6-BF-xTk" secondAttribute="centerX" id="UQG-ZY-Ne3"/>
+                            <constraint firstItem="GgK-uU-qxt" firstAttribute="leading" secondItem="Lot-oI-2sn" secondAttribute="leading" id="wJS-Nl-lEM"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="GgK-uU-qxt" secondAttribute="bottom" constant="-12" id="xrt-EX-3VK"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Lot-oI-2sn"/>
+                    </view>
+                    <connections>
+                        <outlet property="helpTextField" destination="WUe-Zv-uwd" id="Xzb-e7-1Q5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="w4o-UC-MkJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1003" y="119"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="TCh-4S-OxF">
+            <objects>
+                <navigationController id="EXl-uZ-5hc" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="VuG-Fc-HfY">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.078098304569721222" green="0.26121455430984497" blue="0.78438097238540649" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="PVU-ZY-BHS"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9Nn-R5-dVe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-704" y="119"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Background" width="414" height="896"/>
+        <image name="CalculateButtonOn" width="135" height="49.5"/>
+        <image name="ResetButtonOn" width="135" height="49.5"/>
+    </resources>
+</document>
